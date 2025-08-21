@@ -11,12 +11,12 @@ def get_weather() -> None:
     data_response = response.json()
     return print(
         f"Performing request to Weather API for "
-        f"city {data_response["location"]["name"]}...\n"
-        f"{data_response["location"]["name"]}/"
-        f"{data_response["location"]["country"]} "
-        f"{data_response["location"]["localtime"]} "
-        f"Weather: {data_response["current"]["temp_c"]}  "
-        f"Celsius, {data_response["current"]["condition"]["text"]}"
+        f"city {data_response['location']['name']}...\n"
+        f"{data_response['location']['name']}/"
+        f"{data_response['location']['country']} "
+        f"{data_response['location']['localtime']} "
+        f"Weather: {data_response['current']['temp_c']}  "
+        f"Celsius, {data_response['current']['condition']['text']}"
     )
 
 
