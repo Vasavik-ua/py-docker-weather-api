@@ -5,10 +5,10 @@ BASE_URL = "https://api.weatherapi.com/v1/current.json"
 API_KEY = os.getenv("API_KEY")
 
 
-def get_weather() -> None:
+def get_weather(city: str) -> None:
     if API_KEY is None:
         raise Exception("API_KEY is not set, please set it to proceed")
-    params = {"key": API_KEY, "q": "paris", "aqi": "no"}
+    params = {"key": API_KEY, "q": city, "aqi": "no"}
     response = requests.get(BASE_URL, params=params)
     if response.status_code != 200:
         raise Exception(f"API request failed "
@@ -27,4 +27,5 @@ def get_weather() -> None:
 
 
 if __name__ == "__main__":
-    get_weather()
+    city = input(f"Enter a city name: ")
+    get_weather(city)

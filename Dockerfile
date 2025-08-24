@@ -1,4 +1,4 @@
-FROM python:3.12.9-alpine
+FROM python:3.12.9-slim
 LABEL maintainer="kalishv"
 
 ENV PYTHONUNBUFFERED=1
