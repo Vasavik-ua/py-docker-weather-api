@@ -11,7 +11,9 @@ def get_weather() -> None:
     params = {"key": API_KEY, "q": "paris", "aqi": "no"}
     response = requests.get(BASE_URL, params=params)
     if response.status_code != 200:
-        raise Exception(f"API request failed {response.status_code}: {response.text}")
+        raise Exception(f"API request failed "
+                        f"{response.status_code}: "
+                        f"{response.text}")
     data_response = response.json()
     return print(
         f"Performing request to Weather API for "
