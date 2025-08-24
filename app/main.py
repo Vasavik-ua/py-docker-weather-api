@@ -27,5 +27,5 @@ def get_weather(city: str) -> None:
 
 
 if __name__ == "__main__":
-    city = input(f"Enter a city name: ")
+    city = input("Enter a city name: ")
     get_weather(city)
